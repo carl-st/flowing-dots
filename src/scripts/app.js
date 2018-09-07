@@ -1,7 +1,7 @@
 import './../styles/main.scss';
 import { Point } from './../model';
 
-const canvas = document.getElementById("background-canvas");
+const canvas = document.getElementById('background-canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const context = canvas.getContext('2d');
@@ -45,6 +45,9 @@ const init = () => {
 
     for (let x = 0; x < pointsNumber; x++){
         let newPoint = new Point();
+        newPoint.circleFillColor = '#262626';
+        newPoint.circleStrokeColor = '#ff708c'; 
+        newPoint.size = (Math.random() * 10);
         newPoint.x = (Math.random() * canvas.width).toFixed(0) * 1;
         newPoint.y = (Math.random() * canvas.height).toFixed(0) * 1;
         points.push(newPoint);
