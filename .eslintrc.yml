@@ -1,0 +1,22 @@
+env:
+  browser: true
+  jest: true
+  node: true
+parser: babel-eslint
+rules:
+  semi: [2, always]
+  indent: [error, 4, { SwitchCase: 1 }]
+  arrow-parens: [2, as-needed]
+  no-var: 2
+  no-param-reassign: [2, {
+      props: false
+  }]
+  object-curly-spacing:
+    - "error"
+    - "always"
+  no-else-return: 1
+  default-case: 2
+  consistent-return: 2
+  no-shadow: 2
+  no-use-before-define: [error, { functions: false, classes: true }]
+  object-property-newline: off
