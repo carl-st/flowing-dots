@@ -60,10 +60,6 @@ module.exports = {
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
         new CleanWebpackPlugin(['public'], { root: process.cwd() }),
-        // new CopyWebpackPlugin([{
-        //     from: './assets/',
-        //     to: './assets/',
-        // }]),
         new HtmlWebpackPlugin({
             template: 'index.html',
             inject: true
