@@ -1,7 +1,7 @@
 class Point {
     constructor () {
-        this.circleFillColor = '#262626';
-        this.circleStrokeColor = '#ff708c'; 
+        this.circleFillColor = '#ffffff';
+        this.circleStrokeColor = '#000000'; 
         this.size = 5;
         this.distances = [];
         this.neighbours = [];
