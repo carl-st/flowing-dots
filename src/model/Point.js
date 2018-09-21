@@ -64,13 +64,10 @@ class Point {
         context.beginPath();  
         this.neighbours.forEach(neighbour => {
             const { point: { x, y }, distance } = neighbour;
-            const opacity = (distance > 300) ? 0 : (300 / distance);
+            const opacity = Math.max(0, 1 - (distance / 300));
             context.moveTo(this.x, this.y);
             context.lineTo(x, y);
-            // context.strokeStyle = this.circleStrokeColor; // may be used instead
             context.strokeStyle = `rgba(255, 112, 140, ${opacity})`; 
-            // somehow this^ does not work fluently so visual opacity is based on line width
-            // that line only makes the connection invisible
             context.lineWidth = opacity;
         });
         context.closePath();
